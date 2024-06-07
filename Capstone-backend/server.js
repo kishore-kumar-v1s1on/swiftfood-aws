@@ -25,9 +25,10 @@ app.use("/api/user",userRouter)
 app.use("/api/cart",cartRouter)
 app.use("/api/order",orderRouter)
 
-app.get("/",(req,res)=>{
-    res.send("API Working")
-})
+app.use(express.static(path.join(__dirname, '../capstone-fend/build')));
+app.get('*', (req, res) =>{
+	res.sendFile(path.resolve(__dirname, '../capstone-fend/build/index.html'));
+});
 
 app.listen(port,()=>{
  console.log(`Server Started on http://localhost:${port}`) 
