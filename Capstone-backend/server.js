@@ -8,6 +8,7 @@ import cartRouter from "./routes/cartRoute.js"
 import orderRouter from "./routes/orderRoute.js"
 import path from 'path';
 
+
 // app config
 const app = express()
 const port = 4000
@@ -27,9 +28,10 @@ app.use("/api/cart",cartRouter)
 app.use("/api/order",orderRouter)
 
 app.use(express.static(path.join(__dirname, '../capstone-fend/build')));
-app.get('*', (req, res) =>{
+app.get('/', (req, res) =>{
 	res.sendFile(path.resolve(__dirname, '../capstone-fend/build/index.html'));
 });
+
 
 app.listen(port,()=>{
  console.log(`Server Started on http://localhost:${port}`) 
