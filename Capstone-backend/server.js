@@ -26,9 +26,9 @@ app.use("/api/user",userRouter)
 app.use("/api/cart",cartRouter)
 app.use("/api/order",orderRouter)
 
-app.use(express.static(path.join(__dirname, './capstone-fend/build')));
+app.use(express.static(path.join(__dirname, '../capstone-fend/build')));
 app.get('*', (req, res) =>{
-	res.sendFile(path.resolve(__dirname, './capstone-fend/build/index.html'));
+	res.sendFile(path.resolve(__dirname, '../capstone-fend/build/index.html'));
 });
 
 app.listen(port,()=>{
