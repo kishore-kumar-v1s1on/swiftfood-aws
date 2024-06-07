@@ -14,4 +14,4 @@ export const assets ={
     parcel_icon
 }
 
-export const url = 'https://cpbackend-eoae.onrender.com'
+export const url = 'http://3.107.89.133:4000'

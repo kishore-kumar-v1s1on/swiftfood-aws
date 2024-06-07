@@ -7,7 +7,7 @@ export const StoreContext = createContext(null)
 const StoreContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState({});
-    const url = "https://cpbackend-eoae.onrender.com"
+    const url = "http://3.107.89.133:4000"
     const [token, setToken] = useState("")
     const [food_list, setFoodList] = useState([]);
 
